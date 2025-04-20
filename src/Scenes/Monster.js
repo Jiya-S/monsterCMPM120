@@ -95,8 +95,8 @@ class Monster extends Phaser.Scene {
             my.sprite.fang.visible = true;
         })
 
-        this.LEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
-        this.RIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
+        this.LEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
+        this.RIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
         
     }
 
