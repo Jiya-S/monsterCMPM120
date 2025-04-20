@@ -95,8 +95,8 @@ class Monster extends Phaser.Scene {
             my.sprite.fang.visible = true;
         })
 
-        this.UP = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
-        this.DOWN = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
+        this.LEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.UP);
+        this.RIGHT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
         
     }
 
@@ -104,15 +104,15 @@ class Monster extends Phaser.Scene {
         let my = this.my;    // create an alias to this.my for readability
 
         //polling input for movement
-        if (this.UP.isDown) {
+        if (this.LEFT.isDown) {
             for (const spr in my.sprite) {
-                my.sprite[spr].y -= 2;
+                my.sprite[spr].x -= 2;
             }
 
         } 
-        if (this.DOWN.isDown) {
+        if (this.RIGHT.isDown) {
             for (const spr in my.sprite) {
-                my.sprite[spr].y += 2;
+                my.sprite[spr].x += 2;
             }
         }
         
